@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard Admin — NAHNU</title>
+  <link rel="icon" type="image/png" href="/logo-primary.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/src/css/style.css">
+</head>
+<body class="bg-[#0d0f14] text-slate-200 min-h-screen flex selection:bg-[#ff6b00] selection:text-white">
+  <!-- Sidebar -->
+  <div id="admin-sidebar-container"></div>
+
+  <!-- Main Content Area -->
+  <main class="flex-1 ml-64 p-8 overflow-y-auto min-h-screen bg-[#0d0f14]">
+    <div class="max-w-7xl mx-auto space-y-8">
+      <!-- Header -->
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-white/[0.08]">
+        <div>
+          <h1 class="text-2xl font-extrabold text-white tracking-tight">Ringkasan Sistem NAHNU</h1>
+          <p class="text-xs text-slate-400 mt-1">Status dan aktivitas data portofolio secara real-time dari Laravel REST API.</p>
+        </div>
+        <div class="flex items-center gap-3">
+          <a href="/admin/project-create.html" class="px-4 py-2.5 rounded-xl bg-gradient-to-r from-[#ff6b00] to-[#ff7a18] hover:from-[#ff7a18] hover:to-[#ff8a2e] text-white font-bold text-xs flex items-center gap-2 shadow-lg shadow-[#ff6b00]/25 transition-all uppercase tracking-wider">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+            <span>Tambah Project Baru</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Stats Grid -->
+      <div id="stats-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <!-- Loading skeletons -->
+        <div class="glass-card p-5 rounded-2xl animate-pulse h-28 bg-[#151722] border border-white/[0.06]"></div>
+        <div class="glass-card p-5 rounded-2xl animate-pulse h-28 bg-[#151722] border border-white/[0.06]"></div>
+        <div class="glass-card p-5 rounded-2xl animate-pulse h-28 bg-[#151722] border border-white/[0.06]"></div>
+        <div class="glass-card p-5 rounded-2xl animate-pulse h-28 bg-[#151722] border border-white/[0.06]"></div>
+      </div>
+
+      <!-- Two Columns: Recent Projects & Recent Messages -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+        <!-- Recent Projects (7 cols) -->
+        <div class="lg:col-span-7 glass-card p-6 rounded-2xl border border-white/[0.08]">
+          <div class="flex items-center justify-between mb-5 pb-3 border-b border-white/[0.06]">
+            <h2 class="text-xs font-bold text-white uppercase tracking-wider font-mono">Project Terbaru</h2>
+            <a href="/admin/projects.html" class="text-xs text-[#ff6b00] hover:text-[#ff8e3d] font-bold">Kelola Semua</a>
+          </div>
+          <div id="recent-projects-list" class="space-y-3">
+            <div class="animate-pulse h-12 bg-[#151722] rounded-xl"></div>
+            <div class="animate-pulse h-12 bg-[#151722] rounded-xl"></div>
+            <div class="animate-pulse h-12 bg-[#151722] rounded-xl"></div>
+          </div>
+        </div>
+
+        <!-- Recent Messages (5 cols) -->
+        <div class="lg:col-span-5 glass-card p-6 rounded-2xl border border-white/[0.08]">
+          <div class="flex items-center justify-between mb-5 pb-3 border-b border-white/[0.06]">
+            <h2 class="text-xs font-bold text-white uppercase tracking-wider font-mono">Pesan Masuk Terbaru</h2>
+            <a href="/admin/messages.html" class="text-xs text-[#ff6b00] hover:text-[#ff8e3d] font-bold">Buka Inbox</a>
+          </div>
+          <div id="recent-messages-list" class="space-y-3">
+            <div class="animate-pulse h-12 bg-[#151722] rounded-xl"></div>
+            <div class="animate-pulse h-12 bg-[#151722] rounded-xl"></div>
+            <div class="animate-pulse h-12 bg-[#151722] rounded-xl"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script type="module" src="/src/js/admin-dashboard.js"></script>
+</body>
+</html>

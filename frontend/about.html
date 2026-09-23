@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About NAHNU — Tiga Developer, Satu Ruang Digital</title>
+  <meta name="description" content="Kenali lebih dekat tim di balik NAHNU: tiga software engineer berdedikasi tinggi dalam arsitektur sistem dan visual web modern.">
+  <link rel="icon" type="image/png" href="/logo-primary.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+  <link rel="stylesheet" href="/src/css/style.css">
+</head>
+<body class="bg-[#0d0f14] text-slate-200 min-h-screen flex flex-col selection:bg-[#ff6b00] selection:text-white bg-dot-grid relative">
+  <div id="navbar-container"></div>
+
+  <!-- Ambient Hero Glow -->
+  <div class="absolute top-12 left-1/2 -translate-x-1/2 w-[750px] h-[380px] hero-glow blur-[130px] rounded-full pointer-events-none -z-10"></div>
+
+  <main class="flex-1 pt-36 pb-24 relative z-10">
+    <div class="max-w-6xl mx-auto px-4 sm:px-8">
+      <!-- Story Header -->
+      <div class="max-w-3xl mb-16">
+        <span class="text-xs uppercase tracking-widest font-mono font-bold text-[#ff6b00] mb-2 block">Tentang Kolektif Kami</span>
+        <h1 class="text-3xl sm:text-5xl md:text-6xl font-extrabold text-white tracking-tight leading-tight mb-6">
+          Three Developers. <br><span class="bg-gradient-to-r from-[#ff6b00] via-[#ff8a3d] to-amber-300 bg-clip-text text-transparent">One Digital Space.</span>
+        </h1>
+        <p class="text-slate-300 text-base sm:text-lg leading-relaxed mb-6 font-normal">
+          <strong class="text-white font-bold">NAHNU</strong> berawal dari visi bersama tiga sahabat developer untuk menciptakan ekosistem rekayasa perangkat lunak yang mengutamakan kode berkualitas, pemisahan arsitektur yang bersih, dan antarmuka pengguna yang memikat.
+        </p>
+        <p class="text-slate-400 text-sm sm:text-base leading-relaxed">
+          Kami memisahkan secara tegas lapisan logika backend yang aman berbasis Laravel REST API dengan tampilan visual frontend yang responsif, cepat, dan interaktif.
+        </p>
+      </div>
+
+      <!-- Core Values / Philosophy -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-20">
+        <div class="glass-card p-6 sm:p-7 rounded-2xl border-t-2 border-t-[#ff6b00] border-white/[0.08]">
+          <div class="w-10 h-10 rounded-xl bg-[#ff6b00]/10 border border-[#ff6b00]/25 text-[#ff6b00] flex items-center justify-center font-bold text-sm mb-4">
+            01
+          </div>
+          <h3 class="text-white font-bold text-base mb-2">Decoupled Architecture</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Pemisahan frontend dan backend menjamin skalabilitas, kecepatan pengembangan paralel, dan kemudahan integrasi dengan platform lain di masa depan.
+          </p>
+        </div>
+        <div class="glass-card p-6 sm:p-7 rounded-2xl border-t-2 border-t-amber-500 border-white/[0.08]">
+          <div class="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-500/25 text-amber-400 flex items-center justify-center font-bold text-sm mb-4">
+            02
+          </div>
+          <h3 class="text-white font-bold text-base mb-2">Security & Performance First</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Validasi ketat, sanitasi konten HTML, perlindungan autentikasi berbasis token Sanctum, serta optimasi bundle static yang super ringan.
+          </p>
+        </div>
+        <div class="glass-card p-6 sm:p-7 rounded-2xl border-t-2 border-t-slate-400 border-white/[0.08]">
+          <div class="w-10 h-10 rounded-xl bg-white/[0.05] border border-white/10 text-slate-300 flex items-center justify-center font-bold text-sm mb-4">
+            03
+          </div>
+          <h3 class="text-white font-bold text-base mb-2">User Experience Centric</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Setiap komponen antarmuka dirancang dengan proporsi tipografi yang rapi, micro-animation halus, dan navigasi yang intuitif di segala ukuran layar.
+          </p>
+        </div>
+      </div>
+
+      <!-- Meet the 3 Developers -->
+      <div class="mb-16">
+        <div class="text-center max-w-xl mx-auto mb-14">
+          <span class="text-xs uppercase tracking-widest font-mono font-bold text-[#ff6b00] mb-2 block">Profil Anggota</span>
+          <h2 class="text-2xl sm:text-4xl font-extrabold text-white">Tiga Talenta, Solusi Komprehensif</h2>
+          <p class="text-xs sm:text-sm text-slate-400 mt-2">Kolaborasi erat menghadirkan sistem web yang tangguh dari fondasi hingga tampilan terdepan.</p>
+        </div>
+
+        <div id="about-team-grid" class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Skeletons -->
+          <div class="glass-card p-6 rounded-3xl animate-pulse h-96 bg-[#151722]"></div>
+          <div class="glass-card p-6 rounded-3xl animate-pulse h-96 bg-[#151722]"></div>
+          <div class="glass-card p-6 rounded-3xl animate-pulse h-96 bg-[#151722]"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div id="footer-container"></div>
+
+  <script type="module" src="/src/js/about.js"></script>
+</body>
+</html>

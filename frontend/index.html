@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NAHNU — Three Developers. One Digital Space.</title>
+  <meta name="description" content="Website portfolio terpadu dari 3 web developer profesional dengan spesialisasi Backend Web, Frontend Architecture, dan Sistem Web Lokal / Sekali Pakai.">
+  <link rel="icon" type="image/png" href="/logo-primary.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+  <link rel="stylesheet" href="/src/css/style.css">
+</head>
+<body class="bg-[#0d0f14] text-slate-200 min-h-screen flex flex-col selection:bg-[#ff6b00] selection:text-white bg-dot-grid relative">
+  <div id="navbar-container"></div>
+
+  <!-- Hero Section -->
+  <header class="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden">
+    <!-- Ambient subtle warm orange glow -->
+    <div class="absolute top-10 left-1/2 -translate-x-1/2 w-[700px] sm:w-[950px] h-[450px] hero-glow blur-[140px] rounded-full pointer-events-none -z-10"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-8 relative z-10 text-center">
+      <!-- Status Pill Badge -->
+      <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-[#151722]/90 text-xs font-semibold text-white border border-white/10 mb-6 shadow-xl backdrop-blur-md">
+        <span class="relative flex h-2 w-2">
+          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#ff6b00] opacity-75"></span>
+          <span class="relative inline-flex rounded-full h-2 w-2 bg-[#ff6b00]"></span>
+        </span>
+        <span class="text-slate-200">Trio Software Engineers</span>
+        <span class="text-white/20">•</span>
+        <span class="text-[#ff7a18] font-mono text-[11px] uppercase tracking-wider font-bold">NAHNU Studio</span>
+      </div>
+
+      <!-- Main Heading (Punchy & Bold) -->
+      <h1 class="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight text-white max-w-4xl mx-auto leading-[1.08] mb-5">
+        Membangun Solusi Digital dengan <span class="bg-gradient-to-r from-[#ff6b00] via-[#ff8a3d] to-amber-300 bg-clip-text text-transparent">Presisi & Performa</span>
+      </h1>
+
+      <!-- Subtitle (Concise, 1 punchy sentence, no walls of text) -->
+      <p class="text-base sm:text-lg text-slate-400 max-w-xl mx-auto leading-relaxed mb-8 font-normal">
+        Tiga developer kolaboratif. Merancang arsitektur website modern dan sistem web berdaya guna tinggi dengan performa presisi.
+      </p>
+
+      <!-- CTA Buttons -->
+      <div class="flex flex-wrap items-center justify-center gap-4 mb-6">
+        <a href="/projects.html" class="px-7 py-3.5 rounded-xl bg-gradient-to-r from-[#ff6b00] to-[#ff7a18] hover:from-[#ff7a18] hover:to-[#ff8c3a] text-white font-bold text-xs uppercase tracking-wider shadow-lg shadow-[#ff6b00]/25 transition-all hover:scale-[1.02] active:scale-[0.98] flex items-center gap-2">
+          <span>Jelajahi Portofolio</span>
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+        </a>
+        <a href="/about.html" class="px-7 py-3.5 rounded-xl bg-white/[0.04] hover:bg-white/[0.08] text-white font-bold text-xs uppercase tracking-wider border border-white/10 shadow-lg backdrop-blur-md transition-all hover:scale-[1.02]">
+          Kenali Tim NAHNU
+        </a>
+      </div>
+
+      <!-- Live Engineer Status / Social Proof -->
+      <div class="inline-flex items-center gap-3 px-4 py-1.5 rounded-full bg-white/[0.03] border border-white/[0.07] mb-14 backdrop-blur-sm shadow-md">
+        <div id="hero-avatar-cluster" class="flex -space-x-2 overflow-hidden">
+          <div class="inline-block h-6 w-6 rounded-full ring-2 ring-[#0d0f14] bg-[#ff6b00]/20 text-[#ff6b00] text-[10px] font-bold text-center leading-6">E</div>
+          <div class="inline-block h-6 w-6 rounded-full ring-2 ring-[#0d0f14] bg-[#ff6b00]/20 text-[#ff6b00] text-[10px] font-bold text-center leading-6">N</div>
+          <div class="inline-block h-6 w-6 rounded-full ring-2 ring-[#0d0f14] bg-[#ff6b00]/20 text-[#ff6b00] text-[10px] font-bold text-center leading-6">F</div>
+        </div>
+        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+        <span class="text-xs text-slate-300 font-medium">3 Core Engineers • Siap Berkolaborasi</span>
+      </div>
+
+      <!-- Visual Centerpiece: Interactive Developer Studio Console -->
+      <div class="relative max-w-5xl mx-auto mb-16">
+        <!-- Floating Pill: Performance (Top-Left) -->
+        <div class="absolute -top-5 -left-2 sm:-left-6 hidden md:flex items-center gap-3 px-4 py-2.5 rounded-2xl bg-[#151722]/95 border border-white/10 shadow-2xl backdrop-blur-xl animate-float z-20">
+          <div class="w-8 h-8 rounded-xl bg-[#ff6b00]/15 border border-[#ff6b00]/30 flex items-center justify-center text-[#ff6b00] text-sm font-bold">⚡</div>
+          <div class="text-left">
+            <span class="block text-[10px] uppercase font-mono text-[#ff6b00] font-extrabold tracking-wider">Performance</span>
+            <span class="block text-xs font-bold text-white font-mono">100/100 Lighthouse</span>
+          </div>
+        </div>
+
+        <!-- Floating Pill: Scalability (Bottom-Right) -->
+        <div class="absolute -bottom-5 -right-2 sm:-right-6 hidden md:flex items-center gap-3 px-4 py-2.5 rounded-2xl bg-[#151722]/95 border border-white/10 shadow-2xl backdrop-blur-xl animate-float-delayed z-20">
+          <div class="w-8 h-8 rounded-xl bg-emerald-500/15 border border-emerald-500/30 flex items-center justify-center text-emerald-400 text-sm font-bold">🛡️</div>
+          <div class="text-left">
+            <span class="block text-[10px] uppercase font-mono text-emerald-400 font-extrabold tracking-wider">Architecture</span>
+            <span class="block text-xs font-bold text-white font-mono">Decoupled REST API</span>
+          </div>
+        </div>
+
+        <!-- Main Glass Console Box -->
+        <div class="glass-card rounded-3xl overflow-hidden border border-white/[0.12] hero-console-glow bg-[#11131c]/90 text-left backdrop-blur-2xl">
+          <!-- Window Header Bar -->
+          <div class="px-5 py-3 bg-[#151722] border-b border-white/[0.08] flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <span class="w-3 h-3 rounded-full bg-[#ef4444] inline-block opacity-80"></span>
+              <span class="w-3 h-3 rounded-full bg-[#f59e0b] inline-block opacity-80"></span>
+              <span class="w-3 h-3 rounded-full bg-[#10b981] inline-block opacity-80"></span>
+              <span class="ml-3 text-[11px] font-mono text-slate-400 hidden sm:inline-block">nahnu_collective // workspace_v2.0</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 text-[10px] font-mono font-bold border border-emerald-500/25 shadow-sm">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                <span>Active Studio</span>
+              </span>
+            </div>
+          </div>
+
+          <!-- Console Interior Grid -->
+          <div class="p-4 sm:p-6 grid grid-cols-1 lg:grid-cols-12 gap-5">
+            <!-- Code Window (Syntax highlighted) -->
+            <div class="lg:col-span-7 bg-[#090b10] rounded-2xl p-4 sm:p-5 border border-white/[0.06] font-mono text-xs shadow-inner overflow-hidden flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between pb-3 mb-3 border-b border-white/[0.06] text-slate-400 text-[11px]">
+                  <div class="flex items-center gap-2">
+                    <svg class="w-3.5 h-3.5 text-[#ff6b00]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+                    <span class="text-slate-200 font-semibold">nahnu.stack.ts</span>
+                  </div>
+                  <span class="text-[10px] uppercase tracking-wider text-slate-500">TypeScript</span>
+                </div>
+                <div class="space-y-1.5 leading-relaxed text-[11px] sm:text-xs">
+                  <div class="text-slate-500"><span class="text-slate-600 mr-3 inline-block w-4 text-right">1</span><span class="text-slate-500">// Trio Engineering Collective</span></div>
+                  <div><span class="text-slate-600 mr-3 inline-block w-4 text-right">2</span><span class="text-[#ff6b00] font-bold">export const</span> <span class="text-amber-300">nahnuStudio</span> = {</div>
+                  <div><span class="text-slate-600 mr-3 inline-block w-4 text-right">3</span>  <span class="text-sky-300">engineers</span>: [<span class="text-emerald-400">"Eric"</span>, <span class="text-emerald-400">"Naufal"</span>, <span class="text-emerald-400">"Fandi"</span>],</div>
+                  <div><span class="text-slate-600 mr-3 inline-block w-4 text-right">4</span>  <span class="text-sky-300">specialties</span>: <span class="text-emerald-400">"Full-stack Web & Local Systems"</span>,</div>
+                  <div><span class="text-slate-600 mr-3 inline-block w-4 text-right">5</span>  <span class="text-sky-300">coreStack</span>: [<span class="text-emerald-400">"Laravel"</span>, <span class="text-emerald-400">"Vue.js"</span>, <span class="text-emerald-400">"Tailwind"</span>, <span class="text-emerald-400">"MySQL"</span>],</div>
+                  <div><span class="text-slate-600 mr-3 inline-block w-4 text-right">6</span>  <span class="text-sky-300">performance</span>: <span class="text-amber-300">"⚡ Sub-second Response Time"</span>,</div>
+                  <div><span class="text-slate-600 mr-3 inline-block w-4 text-right">7</span>  <span class="text-sky-300">status</span>: <span class="text-emerald-400">"● Ready to Build"</span></div>
+                  <div><span class="text-slate-600 mr-3 inline-block w-4 text-right">8</span>};</div>
+                </div>
+              </div>
+
+              <div class="pt-4 mt-4 border-t border-white/[0.04] flex items-center justify-between text-[11px] text-slate-500">
+                <span class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> Compiled without errors</span>
+                <span class="font-mono">UTF-8 • LF</span>
+              </div>
+            </div>
+
+            <!-- Right Visual Column: Live Cards -->
+            <div class="lg:col-span-5 flex flex-col justify-between gap-3">
+              <!-- Card 1: 3 Specialists Identity -->
+              <div class="p-4 rounded-2xl bg-[#151722] border border-white/[0.06] hover:border-[#ff6b00]/30 transition-all">
+                <div class="flex items-center justify-between mb-2">
+                  <span class="text-[10px] uppercase font-mono tracking-wider text-slate-400 font-bold">Trio Specialist</span>
+                  <span class="text-[10px] font-mono text-[#ff6b00] font-bold">1 Team</span>
+                </div>
+                <div class="flex items-center gap-3">
+                  <div class="text-2xl sm:text-3xl font-black text-white font-mono">3 <span class="text-sm font-semibold text-[#ff6b00]">Engineers</span></div>
+                  <div class="h-8 w-[1px] bg-white/10 mx-1"></div>
+                  <div class="text-[11px] text-slate-300 leading-tight font-mono space-y-0.5">
+                    <div class="text-white font-semibold">Frontend Architecture</div>
+                    <div class="text-slate-400">Backend Web REST</div>
+                    <div class="text-slate-400">Local & Intranet System</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 2: Technology Chips Grid -->
+              <div class="p-4 rounded-2xl bg-[#151722] border border-white/[0.06] hover:border-[#ff6b00]/30 transition-all">
+                <span class="text-[10px] uppercase font-mono tracking-wider text-slate-400 font-bold block mb-2.5">Primary Tech Stack</span>
+                <div class="flex flex-wrap gap-1.5">
+                  <span class="px-2.5 py-1 rounded-lg bg-white/[0.04] text-xs font-mono text-slate-200 border border-white/[0.08] flex items-center gap-1.5 hover:border-[#ff6b00]/40 transition-colors">
+                    <i class="devicon-laravel-original text-[#ff6b00]"></i> Laravel
+                  </span>
+                  <span class="px-2.5 py-1 rounded-lg bg-white/[0.04] text-xs font-mono text-slate-200 border border-white/[0.08] flex items-center gap-1.5 hover:border-emerald-400/40 transition-colors">
+                    <i class="devicon-vuejs-plain text-emerald-400"></i> Vue.js
+                  </span>
+                  <span class="px-2.5 py-1 rounded-lg bg-white/[0.04] text-xs font-mono text-slate-200 border border-white/[0.08] flex items-center gap-1.5 hover:border-cyan-400/40 transition-colors">
+                    <i class="devicon-tailwindcss-plain text-cyan-400"></i> Tailwind
+                  </span>
+                  <span class="px-2.5 py-1 rounded-lg bg-white/[0.04] text-xs font-mono text-slate-200 border border-white/[0.08] flex items-center gap-1.5 hover:border-sky-400/40 transition-colors">
+                    <i class="devicon-mysql-original text-sky-400"></i> MySQL
+                  </span>
+                </div>
+              </div>
+
+              <!-- Card 3: Quick Action Exploration Banner -->
+              <a href="/projects.html" class="p-3.5 rounded-2xl bg-gradient-to-r from-[#ff6b00]/15 to-[#ff7a18]/5 border border-[#ff6b00]/30 hover:border-[#ff6b00] flex items-center justify-between text-xs font-bold text-white transition-all group shadow-md hover:scale-[1.01]">
+                <div class="flex items-center gap-2">
+                  <span class="w-2 h-2 rounded-full bg-[#ff6b00] animate-pulse"></span>
+                  <span>Eksplorasi Galeri Karya Proyek</span>
+                </div>
+                <svg class="w-4 h-4 text-[#ff6b00] group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bento Metric Strip -->
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-5xl mx-auto">
+        <div class="glass-card p-4 sm:p-5 rounded-2xl text-left border border-white/[0.08] hover:border-[#ff6b00]/30 transition-all">
+          <div class="text-[11px] font-mono text-[#ff6b00] uppercase font-bold tracking-wider mb-1">01 / Arsitektur</div>
+          <div class="text-sm font-bold text-white mb-0.5">Decoupled REST API</div>
+          <p class="text-xs text-slate-400 leading-relaxed">Pemisahan backend Laravel & frontend modern yang scalable.</p>
+        </div>
+        <div class="glass-card p-4 sm:p-5 rounded-2xl text-left border border-white/[0.08] hover:border-[#ff6b00]/30 transition-all">
+          <div class="text-[11px] font-mono text-[#ff6b00] uppercase font-bold tracking-wider mb-1">02 / Kinerja</div>
+          <div class="text-sm font-bold text-white mb-0.5">Fast & Lightweight</div>
+          <p class="text-xs text-slate-400 leading-relaxed">Bundle static teroptimasi dengan waktu muat super gesit.</p>
+        </div>
+        <div class="glass-card p-4 sm:p-5 rounded-2xl text-left border border-white/[0.08] hover:border-[#ff6b00]/30 transition-all">
+          <div class="text-[11px] font-mono text-[#ff6b00] uppercase font-bold tracking-wider mb-1">03 / Fleksibilitas</div>
+          <div class="text-sm font-bold text-white mb-0.5">Lokal & Sekali Pakai</div>
+          <p class="text-xs text-slate-400 leading-relaxed">Sistem intranet kustom & web apps tepat guna tanpa overhead.</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Team Snapshot Section -->
+  <section class="py-24 border-y border-white/[0.08] bg-[#0f1118]/70 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8">
+      <div class="text-center max-w-xl mx-auto mb-14">
+        <span class="text-xs uppercase tracking-widest font-mono font-bold text-[#ff6b00] mb-2 block">Trio Kolaborator</span>
+        <h2 class="text-2xl sm:text-4xl font-extrabold text-white">3 Developer. 1 Visi Terpadu.</h2>
+        <p class="text-xs sm:text-sm text-slate-400 mt-2">Kombinasi keahlian komplementer untuk mewujudkan produk digital berkualitas.</p>
+      </div>
+
+      <div id="home-team-grid" class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Skeleton Loaders -->
+        <div class="glass-card p-6 rounded-3xl animate-pulse h-64 bg-[#151722]"></div>
+        <div class="glass-card p-6 rounded-3xl animate-pulse h-64 bg-[#151722]"></div>
+        <div class="glass-card p-6 rounded-3xl animate-pulse h-64 bg-[#151722]"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Projects Section -->
+  <section class="py-24 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8">
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-14">
+        <div>
+          <span class="text-xs uppercase tracking-widest font-mono font-bold text-[#ff6b00] mb-2 block">Portofolio Pilihan</span>
+          <h2 class="text-2xl sm:text-4xl font-extrabold text-white">Proyek Unggulan Terbaru</h2>
+        </div>
+        <a href="/projects.html" class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#ff6b00] hover:text-[#ff8e3d] group">
+          <span>Lihat Semua Proyek</span>
+          <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+        </a>
+      </div>
+
+      <div id="home-projects-grid" class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Skeleton Loaders -->
+        <div class="glass-card rounded-2xl overflow-hidden animate-pulse h-80 bg-[#151722]"></div>
+        <div class="glass-card rounded-2xl overflow-hidden animate-pulse h-80 bg-[#151722]"></div>
+        <div class="glass-card rounded-2xl overflow-hidden animate-pulse h-80 bg-[#151722]"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Core Technologies Section -->
+  <section class="py-24 border-y border-white/[0.08] bg-[#0f1118]/70">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8 text-center">
+      <span class="text-xs uppercase tracking-widest font-mono font-bold text-[#ff6b00] mb-2 block">Eksplorasi Teknologi</span>
+      <h2 class="text-2xl sm:text-3xl font-extrabold text-white mb-3">Teknologi Utama yang Kami Kuasai</h2>
+      <p class="text-xs sm:text-sm text-slate-400 max-w-lg mx-auto mb-10">Stack handal yang kami gunakan sehari-hari untuk merancang ekosistem aplikasi stabil dan scalable.</p>
+
+      <div id="home-tech-list" class="flex flex-wrap items-center justify-center gap-3 max-w-4xl mx-auto">
+        <!-- Tech Badges populated via JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action Banner -->
+  <section class="py-24 relative overflow-hidden">
+    <div class="max-w-5xl mx-auto px-4 sm:px-8">
+      <div class="glass-card p-8 sm:p-14 rounded-3xl relative overflow-hidden text-center border border-white/10 shadow-2xl">
+        <div class="absolute -top-24 -right-24 w-80 h-80 bg-[#ff6b00]/20 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute -bottom-24 -left-24 w-80 h-80 bg-amber-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <span class="text-xs uppercase tracking-widest font-mono font-bold text-[#ff6b00] mb-3 block">Mulai Langkah Pertama</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-4">Punya Ide Proyek atau Ingin Berkolaborasi?</h2>
+        <p class="text-slate-400 max-w-xl mx-auto mb-8 text-sm sm:text-base leading-relaxed">
+          Tim NAHNU siap membantu mentransformasikan konsep Anda menjadi website terpublikasi maupun sistem web lokal yang andal, scalable, dan berkinerja tinggi.
+        </p>
+        <a href="/contact.html" class="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-gradient-to-r from-[#ff6b00] to-[#ff7a18] hover:from-[#ff7a18] hover:to-[#ff8c3a] text-white font-bold text-xs uppercase tracking-wider shadow-xl shadow-[#ff6b00]/30 transition-transform hover:scale-105 active:scale-95">
+          <span>Kirim Pesan ke Tim NAHNU</span>
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer-container"></div>
+
+  <script type="module" src="/src/js/home.js"></script>
+</body>
+</html>

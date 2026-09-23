@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Login — NAHNU</title>
+  <link rel="icon" type="image/png" href="/logo-primary.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/src/css/style.css">
+</head>
+<body class="bg-[#0d0f14] text-slate-200 min-h-screen flex items-center justify-center p-4 selection:bg-[#ff6b00] selection:text-white bg-dot-grid relative overflow-hidden">
+  <!-- Subtle warm ambient glow -->
+  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] hero-glow blur-[140px] rounded-full pointer-events-none -z-10"></div>
+
+  <div class="w-full max-w-md relative z-10">
+    <div class="text-center mb-8">
+      <a href="/index.html" class="inline-flex items-center gap-2 mb-4 group">
+        <div class="w-16 h-16 flex items-center justify-center overflow-hidden">
+          <img src="/logo-primary.png" alt="NAHNU Logo" class="w-full h-full object-cover">
+        </div>
+      </a>
+      <h1 class="text-2xl font-bold text-white tracking-tight">Login Administrator</h1>
+      <p class="text-xs text-slate-400 mt-1">Masuk untuk mengelola portofolio, developer, dan inbox NAHNU.</p>
+    </div>
+
+    <div class="glass-card p-8 rounded-3xl border border-white/[0.08] shadow-2xl">
+      <form id="login-form" class="space-y-5">
+        <div>
+          <label class="block text-xs font-semibold text-slate-300 mb-2" for="email">Email Administrator</label>
+          <input 
+            type="email" 
+            id="email" 
+            required 
+            value="admin@nahnu.id"
+            placeholder="admin@nahnu.id"
+            class="w-full bg-[#11131c] border border-white/[0.1] rounded-xl px-4 py-3 text-xs text-white placeholder:text-slate-500 focus:outline-none focus:border-[#ff6b00] transition-colors font-mono"
+          >
+        </div>
+
+        <div>
+          <div class="flex items-center justify-between mb-2">
+            <label class="block text-xs font-semibold text-slate-300" for="password">Password</label>
+          </div>
+          <input 
+            type="password" 
+            id="password" 
+            required 
+            value="password"
+            placeholder="••••••••"
+            class="w-full bg-[#11131c] border border-white/[0.1] rounded-xl px-4 py-3 text-xs text-white placeholder:text-slate-500 focus:outline-none focus:border-[#ff6b00] transition-colors"
+          >
+        </div>
+
+        <div id="login-error" class="hidden text-xs py-2.5 px-4 rounded-xl bg-rose-500/10 border border-rose-500/30 text-rose-300 font-medium"></div>
+
+        <button 
+          type="submit" 
+          id="login-btn"
+          class="w-full py-3.5 rounded-xl bg-gradient-to-r from-[#ff6b00] to-[#ff7a18] hover:from-[#ff7a18] hover:to-[#ff8a2e] text-white font-bold text-xs uppercase tracking-wider shadow-lg shadow-[#ff6b00]/25 transition-all hover:scale-[1.01] active:scale-[0.99] flex items-center justify-center gap-2"
+        >
+          <span>Masuk ke Dashboard</span>
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+        </button>
+      </form>
+
+      <div class="mt-6 pt-6 border-t border-white/[0.08] text-center">
+        <a href="/index.html" class="text-xs text-slate-400 hover:text-[#ff6b00] transition-colors flex items-center justify-center gap-1.5 font-medium">
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+          <span>Kembali ke Website Utama</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="/src/js/admin-login.js"></script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Projects — NAHNU</title>
+  <meta name="description" content="Daftar lengkap proyek digital yang dibangun oleh tim developer NAHNU.">
+  <link rel="icon" type="image/png" href="/logo-primary.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+  <link rel="stylesheet" href="/src/css/style.css">
+</head>
+<body class="bg-[#0d0f14] text-slate-200 min-h-screen flex flex-col selection:bg-[#ff6b00] selection:text-white bg-dot-grid relative">
+  <div id="navbar-container"></div>
+
+  <!-- Ambient Hero Glow -->
+  <div class="absolute top-10 left-1/2 -translate-x-1/2 w-[700px] h-[350px] hero-glow blur-[130px] rounded-full pointer-events-none -z-10"></div>
+
+  <main class="flex-1 pt-36 pb-24 relative z-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8">
+      <!-- Header -->
+      <div class="max-w-2xl mb-12">
+        <span class="text-xs uppercase tracking-widest font-mono font-bold text-[#ff6b00] mb-2 block">Katalog Portofolio</span>
+        <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight mb-4 leading-tight">
+          Galeri Website & <span class="bg-gradient-to-r from-[#ff6b00] via-[#ff8a3d] to-amber-300 bg-clip-text text-transparent">Web Systems</span>
+        </h1>
+        <p class="text-slate-400 text-sm sm:text-base leading-relaxed">
+          Koleksi website yang kami rancang — mencakup website terpublikasi publik hingga sistem web sekali pakai dan sistem yang beroperasi di jaringan lokal / intranet.
+        </p>
+      </div>
+
+      <!-- Filters & Search Bar -->
+      <div class="glass-card p-3 sm:p-4 rounded-2xl mb-10 flex flex-col md:flex-row items-stretch md:items-center justify-between gap-4 border border-white/[0.08]">
+        <!-- Category Tabs -->
+        <div id="category-filter-container" class="flex flex-wrap items-center gap-1.5 overflow-x-auto pb-1 md:pb-0">
+          <button data-slug="" class="cat-btn px-4 py-2 rounded-xl text-xs font-bold bg-[#ff6b00] text-white shadow-md shadow-[#ff6b00]/30 transition-all">
+            Semua
+          </button>
+        </div>
+
+        <!-- Search Input -->
+        <div class="relative min-w-[280px]">
+          <input 
+            type="text" 
+            id="search-input" 
+            placeholder="Cari nama project atau fitur..." 
+            class="w-full bg-[#11131c] border border-white/[0.1] rounded-xl px-4 py-2.5 pl-10 text-xs text-white placeholder:text-slate-500 focus:outline-none focus:border-[#ff6b00] focus:ring-1 focus:ring-[#ff6b00]/40 transition-colors"
+          >
+          <svg class="w-4 h-4 text-slate-400 absolute left-3.5 top-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Projects Grid -->
+      <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Skeletons -->
+        <div class="glass-card rounded-2xl overflow-hidden animate-pulse h-80 bg-[#151722]"></div>
+        <div class="glass-card rounded-2xl overflow-hidden animate-pulse h-80 bg-[#151722]"></div>
+        <div class="glass-card rounded-2xl overflow-hidden animate-pulse h-80 bg-[#151722]"></div>
+      </div>
+    </div>
+  </main>
+
+  <div id="footer-container"></div>
+
+  <script type="module" src="/src/js/projects.js"></script>
+</body>
+</html>

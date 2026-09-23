@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detail Project — NAHNU</title>
+  <meta name="description" content="Detail lengkap project portfolio kolaboratif tim NAHNU.">
+  <link rel="icon" type="image/png" href="/logo-primary.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+  <link rel="stylesheet" href="/src/css/style.css">
+</head>
+<body class="bg-[#0d0f14] text-slate-200 min-h-screen flex flex-col selection:bg-[#ff6b00] selection:text-white bg-dot-grid relative">
+  <div id="navbar-container"></div>
+
+  <!-- Ambient Hero Glow -->
+  <div class="absolute top-12 left-1/2 -translate-x-1/2 w-[800px] h-[400px] hero-glow blur-[140px] rounded-full pointer-events-none -z-10"></div>
+
+  <main class="flex-1 pt-32 sm:pt-36 pb-24 relative z-10">
+    <div class="max-w-6xl mx-auto px-4 sm:px-8">
+      <!-- Content Container -->
+      <div id="project-detail-container">
+        <!-- Skeleton Loader -->
+        <div class="animate-pulse space-y-6">
+          <div class="h-6 bg-[#151722] rounded w-1/4 border border-white/[0.06]"></div>
+          <div class="h-12 bg-[#151722] rounded w-3/4 border border-white/[0.06]"></div>
+          <div class="h-6 bg-[#151722] rounded w-1/2 border border-white/[0.06]"></div>
+          <div class="aspect-video bg-[#151722] rounded-3xl border border-white/[0.06]"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div id="footer-container"></div>
+
+  <script type="module" src="/src/js/project-detail.js"></script>
+</body>
+</html>

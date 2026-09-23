@@ -1,0 +1,303 @@
+@import "tailwindcss";
+@source "../js";
+@source "../..";
+
+@layer base {
+  :root {
+    --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+    --color-brand: #ff6b00;
+    --color-brand-hover: #ff7f24;
+    --color-brand-glow: rgba(255, 107, 0, 0.22);
+    --bg-dark: #0d0f14;
+    --bg-card: #151720;
+    --bg-card-hover: #1b1e2a;
+    --border-subtle: rgba(255, 255, 255, 0.08);
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #0d0f14;
+    color: #cbd5e1;
+    overflow-x: hidden;
+    selection-background-color: #ff6b00;
+    selection-color: #ffffff;
+  }
+
+  ::selection {
+    background-color: #ff6b00;
+    color: #ffffff;
+  }
+}
+
+/* Custom Scrollbar for Dark Charcoal Theme */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0d0f14;
+}
+::-webkit-scrollbar-thumb {
+  background: #242838;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #ff6b00;
+}
+
+/* Background Grids & Ambient Glows */
+.bg-dot-grid {
+  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.07) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+.hero-glow {
+  background: radial-gradient(circle at 50% 30%, rgba(255, 107, 0, 0.16), rgba(255, 127, 36, 0.05) 45%, transparent 70%);
+}
+
+.card-ambient-glow {
+  position: relative;
+}
+.card-ambient-glow::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  background: linear-gradient(135deg, rgba(255, 107, 0, 0.35), transparent 40%, rgba(255, 255, 255, 0.05));
+  border-radius: inherit;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.card-ambient-glow:hover::before {
+  opacity: 1;
+}
+
+/* Modern Bento Dark Cards & Panels */
+.glass-panel {
+  background: rgba(13, 15, 20, 0.82);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-card {
+  background: #151720;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.05), 0 4px 20px -2px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card:hover {
+  background: #181a24;
+  border-color: rgba(255, 107, 0, 0.4);
+  box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.1), 0 20px 40px -10px rgba(0, 0, 0, 0.7), 0 0 25px -5px rgba(255, 107, 0, 0.15);
+}
+
+/* Brand Accent Helpers */
+.text-brand {
+  color: #ff6b00;
+}
+.bg-brand {
+  background-color: #ff6b00;
+}
+.bg-brand-hover:hover {
+  background-color: #ff7f24;
+}
+.border-brand {
+  border-color: #ff6b00;
+}
+
+/* Glow & Floating Animations for Hero Visuals */
+@keyframes pulse-slow {
+  0%, 100% { opacity: 0.8; transform: scale(1); }
+  50% { opacity: 0.3; transform: scale(1.15); }
+}
+.animate-pulse-slow {
+  animation: pulse-slow 3s infinite ease-in-out;
+}
+
+@keyframes float-soft {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+.animate-float {
+  animation: float-soft 5s ease-in-out infinite;
+}
+
+@keyframes float-soft-delayed {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(8px); }
+}
+.animate-float-delayed {
+  animation: float-soft-delayed 6s ease-in-out 1.5s infinite;
+}
+
+.hero-console-glow {
+  box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.9), 0 0 50px -10px rgba(255, 107, 0, 0.15), inset 0 1px 0 0 rgba(255, 255, 255, 0.1);
+}
+
+/* Three-Dots Floating Popup Menu Animation */
+@keyframes popup-enter {
+  0% {
+    opacity: 0;
+    transform: scale(0.92) translateY(-6px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+.animate-popup {
+  animation: popup-enter 0.18s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Quill rich text container rendering in modern Dark Charcoal Mode */
+.quill-content {
+  color: #cbd5e1;
+  line-height: 1.85;
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+.quill-content h1 {
+  font-size: 1.875rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-top: 2rem;
+  margin-bottom: 0.85rem;
+  letter-spacing: -0.025em;
+}
+.quill-content h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #f8fafc;
+  margin-top: 1.75rem;
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.02em;
+}
+.quill-content h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #f1f5f9;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+.quill-content p {
+  margin-bottom: 1.25rem;
+  color: #94a3b8;
+}
+.quill-content strong,
+.quill-content b {
+  color: #ffffff;
+  font-weight: 700;
+}
+.quill-content em,
+.quill-content i {
+  color: #e2e8f0;
+}
+.quill-content ul {
+  list-style-type: disc;
+  margin-left: 1.75rem;
+  margin-bottom: 1.25rem;
+  color: #cbd5e1;
+}
+.quill-content ol {
+  list-style-type: decimal;
+  margin-left: 1.75rem;
+  margin-bottom: 1.25rem;
+  color: #cbd5e1;
+}
+.quill-content li {
+  margin-bottom: 0.4rem;
+}
+.quill-content a {
+  color: #ff6b00;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+.quill-content a:hover {
+  color: #ff8e3d;
+}
+.quill-content blockquote {
+  border-left: 3px solid #ff6b00;
+  padding: 0.85rem 1.25rem;
+  font-style: italic;
+  color: #e2e8f0;
+  margin: 1.5rem 0;
+  background: rgba(255, 107, 0, 0.05);
+  border-radius: 0 0.75rem 0.75rem 0;
+  border-top: 1px solid rgba(255, 107, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 107, 0, 0.1);
+  border-right: 1px solid rgba(255, 107, 0, 0.1);
+}
+.quill-content pre {
+  background: #090a0f;
+  color: #f1f5f9;
+  padding: 1.25rem;
+  border-radius: 0.85rem;
+  overflow-x: auto;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 1.5rem;
+  font-family: var(--font-mono);
+  box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.6);
+}
+.quill-content code {
+  background: #1c1f2b;
+  color: #ff8e3d;
+  padding: 0.2rem 0.45rem;
+  border-radius: 0.35rem;
+  font-size: 0.875em;
+  font-family: var(--font-mono);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+pre code {
+  background: transparent !important;
+  color: inherit !important;
+  border: none !important;
+  padding: 0 !important;
+}
+
+/* Quill Snow Editor in Dark Admin Mode */
+.ql-toolbar.ql-snow {
+  background: #151722 !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-top-left-radius: 0.75rem;
+  border-top-right-radius: 0.75rem;
+}
+.ql-toolbar.ql-snow .ql-stroke {
+  stroke: #94a3b8 !important;
+}
+.ql-toolbar.ql-snow .ql-fill {
+  fill: #94a3b8 !important;
+}
+.ql-toolbar.ql-snow .ql-picker {
+  color: #94a3b8 !important;
+}
+.ql-toolbar.ql-snow .ql-picker-options {
+  background-color: #151722 !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  color: #f1f5f9 !important;
+}
+.ql-toolbar.ql-snow button:hover .ql-stroke,
+.ql-toolbar.ql-snow .ql-picker:hover .ql-stroke {
+  stroke: #ff6b00 !important;
+}
+.ql-toolbar.ql-snow button:hover .ql-fill,
+.ql-toolbar.ql-snow .ql-picker:hover .ql-fill {
+  fill: #ff6b00 !important;
+}
+.ql-container.ql-snow {
+  background: #11131c !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-top: none !important;
+  border-bottom-left-radius: 0.75rem;
+  border-bottom-right-radius: 0.75rem;
+  color: #f1f5f9 !important;
+  font-family: var(--font-sans);
+}
+.ql-editor.ql-blank::before {
+  color: #64748b !important;
+}
+

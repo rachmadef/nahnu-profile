@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hubungi Kami — NAHNU</title>
+  <meta name="description" content="Sampaikan ide proyek, konsultasi teknis, atau pertanyaan kepada tim developer NAHNU.">
+  <link rel="icon" type="image/png" href="/logo-primary.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/src/css/style.css">
+</head>
+<body class="bg-[#0d0f14] text-slate-200 min-h-screen flex flex-col selection:bg-[#ff6b00] selection:text-white bg-dot-grid relative">
+  <div id="navbar-container"></div>
+
+  <!-- Ambient Hero Glow -->
+  <div class="absolute top-12 left-1/2 -translate-x-1/2 w-[700px] h-[350px] hero-glow blur-[130px] rounded-full pointer-events-none -z-10"></div>
+
+  <main class="flex-1 pt-36 pb-24 relative z-10">
+    <div class="max-w-6xl mx-auto px-4 sm:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+        <!-- Left Column: Information -->
+        <div class="lg:col-span-5 space-y-8">
+          <div>
+            <span class="text-xs uppercase tracking-widest font-mono font-bold text-[#ff6b00] mb-2 block">Mulai Diskusi</span>
+            <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight mb-4 leading-tight">
+              Mari Kolaborasi Bersama <span class="bg-gradient-to-r from-[#ff6b00] via-[#ff8a3d] to-amber-300 bg-clip-text text-transparent">NAHNU</span>
+            </h1>
+            <p class="text-slate-400 text-sm sm:text-base leading-relaxed">
+              Punya ide produk digital baru, kebutuhan pengembangan sistem backend berkinerja tinggi, atau desain antarmuka modern? Hubungi kami langsung melalui formulir ini.
+            </p>
+          </div>
+
+          <div class="space-y-4">
+            <div class="glass-card p-5 rounded-2xl flex items-center gap-4 border border-white/[0.08]">
+              <div class="w-10 h-10 rounded-xl bg-[#ff6b00]/10 border border-[#ff6b00]/25 text-[#ff6b00] flex items-center justify-center shrink-0">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+              </div>
+              <div>
+                <span class="text-[10px] uppercase font-mono tracking-wider font-bold text-slate-400 block">Email Tim</span>
+                <span class="text-sm font-bold text-white font-mono">contact@nahnu.id</span>
+              </div>
+            </div>
+
+            <div class="glass-card p-5 rounded-2xl flex items-center gap-4 border border-white/[0.08]">
+              <div class="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-500/25 text-amber-400 flex items-center justify-center shrink-0">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+              </div>
+              <div>
+                <span class="text-[10px] uppercase font-mono tracking-wider font-bold text-slate-400 block">Lokasi & Operasional</span>
+                <span class="text-sm font-bold text-white">Indonesia • Remote Worldwide</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Interactive Form -->
+        <div class="lg:col-span-7">
+          <div class="glass-card p-8 sm:p-10 rounded-3xl border border-white/[0.08] shadow-2xl">
+            <h2 class="text-xl font-bold text-white mb-2">Kirim Pesan</h2>
+            <p class="text-xs text-slate-400 mb-8">Pesan Anda akan langsung terkirim ke sistem manajemen pesan tim kami.</p>
+
+            <form id="contact-form" class="space-y-5">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                <div>
+                  <label class="block text-xs font-semibold text-slate-300 mb-2" for="name">Nama Lengkap *</label>
+                  <input 
+                    type="text" 
+                    id="name" 
+                    required 
+                    placeholder="Contoh: Budi Santoso"
+                    class="w-full bg-[#11131c] border border-white/[0.1] rounded-xl px-4 py-3 text-xs text-white placeholder:text-slate-500 focus:outline-none focus:border-[#ff6b00] focus:ring-1 focus:ring-[#ff6b00]/40 transition-colors"
+                  >
+                </div>
+                <div>
+                  <label class="block text-xs font-semibold text-slate-300 mb-2" for="email">Alamat Email *</label>
+                  <input 
+                    type="email" 
+                    id="email" 
+                    required 
+                    placeholder="nama@perusahaan.com"
+                    class="w-full bg-[#11131c] border border-white/[0.1] rounded-xl px-4 py-3 text-xs text-white placeholder:text-slate-500 focus:outline-none focus:border-[#ff6b00] focus:ring-1 focus:ring-[#ff6b00]/40 transition-colors"
+                  >
+                </div>
+              </div>
+
+              <div>
+                <label class="block text-xs font-semibold text-slate-300 mb-2" for="subject">Topik / Subject *</label>
+                <input 
+                  type="text" 
+                  id="subject" 
+                  required 
+                  placeholder="Misal: Diskusi Arsitektur Proyek Web App"
+                  class="w-full bg-[#11131c] border border-white/[0.1] rounded-xl px-4 py-3 text-xs text-white placeholder:text-slate-500 focus:outline-none focus:border-[#ff6b00] focus:ring-1 focus:ring-[#ff6b00]/40 transition-colors"
+                >
+              </div>
+
+              <div>
+                <label class="block text-xs font-semibold text-slate-300 mb-2" for="message">Pesan Anda *</label>
+                <textarea 
+                  id="message" 
+                  rows="5" 
+                  required 
+                  placeholder="Jelaskan kebutuhan spesifikasi, fitur, atau pertanyaan Anda..."
+                  class="w-full bg-[#11131c] border border-white/[0.1] rounded-xl px-4 py-3 text-xs text-white placeholder:text-slate-500 focus:outline-none focus:border-[#ff6b00] focus:ring-1 focus:ring-[#ff6b00]/40 transition-colors resize-none"
+                ></textarea>
+              </div>
+
+              <div id="form-feedback" class="hidden text-xs py-3 px-4 rounded-xl font-medium"></div>
+
+              <button 
+                type="submit" 
+                id="submit-btn" 
+                class="w-full py-3.5 rounded-xl bg-gradient-to-r from-[#ff6b00] to-[#ff7a18] hover:from-[#ff7a18] hover:to-[#ff8a2e] text-white font-bold text-xs uppercase tracking-wider shadow-lg shadow-[#ff6b00]/25 transition-all hover:scale-[1.01] active:scale-[0.99] flex items-center justify-center gap-2"
+              >
+                <span>Kirim Pesan Sekarang</span>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div id="footer-container"></div>
+
+  <script type="module" src="/src/js/contact.js"></script>
+</body>
+</html>

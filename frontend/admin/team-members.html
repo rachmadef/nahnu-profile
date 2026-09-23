@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kelola Developer Tim — NAHNU Admin</title>
+  <link rel="icon" type="image/png" href="/logo-primary.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/src/css/style.css">
+</head>
+<body class="bg-[#0d0f14] text-slate-200 min-h-screen flex selection:bg-[#ff6b00] selection:text-white">
+  <div id="admin-sidebar-container"></div>
+
+  <main class="flex-1 ml-64 p-8 overflow-y-auto min-h-screen bg-[#0d0f14]">
+    <div class="max-w-5xl mx-auto space-y-6">
+      <div class="flex items-center justify-between pb-6 border-b border-white/[0.08]">
+        <div>
+          <h1 class="text-2xl font-extrabold text-white tracking-tight">Anggota Tim NAHNU (3 Developer)</h1>
+          <p class="text-xs text-slate-400 mt-1">Kelola data profil, keahlian, dan tautan sosial media dari 3 developer.</p>
+        </div>
+        <button id="add-member-btn" class="px-4 py-2.5 rounded-xl bg-gradient-to-r from-[#ff6b00] to-[#ff7a18] hover:from-[#ff7a18] hover:to-[#ff8a2e] text-white font-bold text-xs flex items-center gap-2 shadow-lg shadow-[#ff6b00]/25 transition-all uppercase tracking-wider">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+          <span>Tambah Developer</span>
+        </button>
+      </div>
+
+      <div id="team-cards-grid" class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="glass-card p-6 rounded-2xl animate-pulse h-64 bg-[#151722] border border-white/[0.06]"></div>
+        <div class="glass-card p-6 rounded-2xl animate-pulse h-64 bg-[#151722] border border-white/[0.06]"></div>
+        <div class="glass-card p-6 rounded-2xl animate-pulse h-64 bg-[#151722] border border-white/[0.06]"></div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Modal Add/Edit Member -->
+  <div id="member-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-xs overflow-y-auto">
+    <div class="bg-[#151722] p-6 sm:p-8 rounded-3xl w-full max-w-lg border border-white/[0.08] shadow-2xl my-8 text-slate-200">
+      <h3 id="modal-title" class="text-base font-bold text-white mb-4">Edit Profil Developer</h3>
+      <form id="member-form" class="space-y-4">
+        <input type="hidden" id="member-id">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-xs font-semibold text-slate-300 mb-1" for="m-name">Nama Lengkap *</label>
+            <input type="text" id="m-name" required class="w-full bg-[#11131c] border border-white/[0.1] rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-[#ff6b00]">
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-slate-300 mb-1" for="m-slug">Slug *</label>
+            <input type="text" id="m-slug" required class="w-full bg-[#11131c] border border-white/[0.1] rounded-xl px-3 py-2 text-xs text-white font-mono focus:outline-none focus:border-[#ff6b00]">
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-xs font-semibold text-slate-300 mb-1" for="m-role">Role / Posisi *</label>
+          <input type="text" id="m-role" required placeholder="Misal: Lead Backend Engineer" class="w-full bg-[#11131c] border border-white/[0.1] rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-[#ff6b00]">
+        </div>
+
+        <div>
+          <label class="block text-xs font-semibold text-slate-300 mb-1" for="m-bio">Bio Ringkas</label>
+          <textarea id="m-bio" rows="2" class="w-full bg-[#11131c] border border-white/[0.1] rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-[#ff6b00] resize-none"></textarea>
+        </div>
+
+        <div>
+          <label class="block text-xs font-semibold text-slate-300 mb-1" for="m-skills">Skills (Pisahkan dengan koma)</label>
+          <input type="text" id="m-skills" placeholder="Laravel, MySQL, Docker, REST API" class="w-full bg-[#11131c] border border-white/[0.1] rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-[#ff6b00]">
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+          <div>
+            <label class="block text-xs font-semibold text-slate-300 mb-1" for="m-github">GitHub URL</label>
+            <input type="url" id="m-github" placeholder="https://github.com" class="w-full bg-[#11131c] border border-white/[0.1] rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-[#ff6b00]">
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-slate-300 mb-1" for="m-linkedin">LinkedIn URL</label>
+            <input type="url" id="m-linkedin" placeholder="https://linkedin.com" class="w-full bg-[#11131c] border border-white/[0.1] rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-[#ff6b00]">
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-slate-300 mb-1" for="m-instagram">Instagram URL</label>
+            <input type="url" id="m-instagram" placeholder="https://instagram.com" class="w-full bg-[#11131c] border border-white/[0.1] rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-[#ff6b00]">
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-xs font-semibold text-slate-300 mb-1">Foto Profil</label>
+          <input type="file" id="m-photo" accept="image/*" class="text-xs text-slate-400 file:mr-3 file:py-1.5 file:px-3 file:rounded-xl file:border-0 file:text-xs file:font-bold file:bg-[#ff6b00] file:text-white hover:file:bg-[#ff7a18]">
+        </div>
+
+        <div class="flex items-center justify-end gap-2 pt-4 border-t border-white/[0.08]">
+          <button type="button" id="close-modal-btn" class="px-4 py-2 rounded-xl text-xs font-bold text-slate-400 hover:text-white transition-colors">Batal</button>
+          <button type="submit" class="px-5 py-2 rounded-xl bg-gradient-to-r from-[#ff6b00] to-[#ff7a18] hover:from-[#ff7a18] hover:to-[#ff8a2e] text-white font-bold text-xs uppercase tracking-wider shadow-md shadow-[#ff6b00]/25 transition-all">Simpan</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script type="module" src="/src/js/admin-team-members.js"></script>
+</body>
+</html>

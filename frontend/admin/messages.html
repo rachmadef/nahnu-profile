@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pesan Masuk — NAHNU Admin</title>
+  <link rel="icon" type="image/png" href="/logo-primary.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/src/css/style.css">
+</head>
+<body class="bg-[#0d0f14] text-slate-200 min-h-screen flex selection:bg-[#ff6b00] selection:text-white">
+  <div id="admin-sidebar-container"></div>
+
+  <main class="flex-1 ml-64 p-8 overflow-y-auto min-h-screen bg-[#0d0f14]">
+    <div class="max-w-6xl mx-auto space-y-6">
+      <div class="flex items-center justify-between pb-6 border-b border-white/[0.08]">
+        <div>
+          <h1 class="text-2xl font-extrabold text-white tracking-tight">Inbox Pesan Kontak</h1>
+          <p class="text-xs text-slate-400 mt-1">Daftar pesan dari calon klien, kolaborator, dan pengunjung website.</p>
+        </div>
+        <div class="flex items-center gap-2">
+          <button id="filter-all-btn" class="px-3.5 py-1.5 rounded-xl text-xs font-bold bg-[#ff6b00] text-white shadow-md shadow-[#ff6b00]/25 transition-all">Semua</button>
+          <button id="filter-unread-btn" class="px-3.5 py-1.5 rounded-xl text-xs font-bold bg-white/[0.05] text-slate-300 hover:text-white border border-white/[0.08] transition-all">Belum Dibaca</button>
+        </div>
+      </div>
+
+      <div class="glass-card rounded-2xl overflow-hidden border border-white/[0.08]">
+        <div class="overflow-x-auto">
+          <table class="w-full text-left text-xs">
+            <thead class="bg-[#12141c] text-slate-300 uppercase tracking-wider font-bold border-b border-white/[0.08]">
+              <tr>
+                <th class="p-4">Pengirim</th>
+                <th class="p-4">Subjek & Pesan</th>
+                <th class="p-4">Tanggal</th>
+                <th class="p-4">Status</th>
+                <th class="p-4 text-right">Aksi</th>
+              </tr>
+            </thead>
+            <tbody id="messages-table-body" class="divide-y divide-white/[0.06]">
+              <tr><td colspan="5" class="p-8 text-center text-slate-400">Memuat pesan...</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Modal View Message -->
+  <div id="view-message-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-xs">
+    <div class="bg-[#151722] p-6 sm:p-8 rounded-3xl w-full max-w-xl border border-white/[0.08] shadow-2xl space-y-5 text-slate-200">
+      <div class="flex items-center justify-between pb-3 border-b border-white/[0.08]">
+        <div>
+          <h3 id="msg-sender" class="text-base font-bold text-white">Nama Pengirim</h3>
+          <p id="msg-email" class="text-xs text-[#ff6b00] font-mono">email@example.com</p>
+        </div>
+        <span id="msg-date" class="text-[11px] text-slate-400 font-mono">Tanggal</span>
+      </div>
+
+      <div>
+        <span class="text-[10px] uppercase font-bold tracking-wider text-slate-400 font-mono block mb-1">Subjek</span>
+        <h4 id="msg-subject" class="text-sm font-bold text-white">Subjek Pesan</h4>
+      </div>
+
+      <div>
+        <span class="text-[10px] uppercase font-bold tracking-wider text-slate-400 font-mono block mb-1">Isi Pesan</span>
+        <div id="msg-body" class="p-4 rounded-xl bg-[#11131c] border border-white/[0.08] text-xs text-slate-300 leading-relaxed whitespace-pre-wrap max-h-60 overflow-y-auto"></div>
+      </div>
+
+      <div class="flex items-center justify-between pt-4 border-t border-white/[0.08]">
+        <a id="msg-reply-link" href="#" class="px-4 py-2 rounded-xl bg-gradient-to-r from-[#ff6b00] to-[#ff7a18] hover:from-[#ff7a18] hover:to-[#ff8a2e] text-white font-bold text-xs inline-flex items-center gap-2 shadow-md shadow-[#ff6b00]/25 transition-all">
+          <span>Balas via Email</span>
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+        </a>
+        <button type="button" id="close-msg-modal-btn" class="px-4 py-2 rounded-xl text-xs font-bold text-slate-400 hover:text-white transition-colors">Tutup</button>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="/src/js/admin-messages.js"></script>
+</body>
+</html>
