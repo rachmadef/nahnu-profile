@@ -76,7 +76,7 @@ async function initHome() {
     const container = document.getElementById('home-projects-grid');
     if (container) {
       if (projects.length === 0) {
-        container.innerHTML = `<div class="col-span-3 text-center py-12 text-slate-400 text-xs">Belum ada project yang dipublikasikan.</div>`;
+        container.innerHTML = `<div class="col-span-3 text-center py-12 text-slate-400 text-xs">Belum ada website yang dipublikasikan.</div>`;
       } else {
         container.innerHTML = projects.map(p => `
           <div class="glass-card rounded-2xl overflow-hidden flex flex-col group border border-white/[0.08] hover:border-[#ff6b00]/40">

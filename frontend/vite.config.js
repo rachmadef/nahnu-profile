@@ -22,6 +22,8 @@ export default defineConfig({
         projectDetail: resolve(__dirname, 'project-detail.html'),
         about: resolve(__dirname, 'about.html'),
         contact: resolve(__dirname, 'contact.html'),
+        design: resolve(__dirname, 'design.html'),
+        entertainment: resolve(__dirname, 'entertainment.html'),
         adminLogin: resolve(__dirname, 'admin/login.html'),
         adminDashboard: resolve(__dirname, 'admin/dashboard.html'),
         adminProjects: resolve(__dirname, 'admin/projects.html'),

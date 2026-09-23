@@ -2,7 +2,7 @@ import { renderPublicNavbar, renderPublicFooter } from './components.js';
 import { fetchPublicProjects, fetchPublicCategories } from './api.js';
 import { getAssetUrl } from './utils.js';
 
-renderPublicNavbar('projects');
+renderPublicNavbar('website');
 renderPublicFooter();
 
 let currentCategory = '';

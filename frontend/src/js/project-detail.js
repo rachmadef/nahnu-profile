@@ -2,7 +2,7 @@ import { renderPublicNavbar, renderPublicFooter } from './components.js';
 import { fetchPublicProjectDetail } from './api.js';
 import { formatDate, getAssetUrl } from './utils.js';
 
-renderPublicNavbar('projects');
+renderPublicNavbar('website');
 renderPublicFooter();
 
 async function initProjectDetail() {
@@ -17,7 +17,7 @@ async function initProjectDetail() {
       <div class="glass-card p-12 text-center rounded-3xl border border-white/[0.08]">
         <h2 class="text-xl font-bold text-white mb-2">Project Tidak Ditemukan</h2>
         <p class="text-xs text-slate-400 mb-6">Parameter slug project tidak ditemukan pada URL.</p>
-        <a href="/projects.html" class="px-5 py-2.5 rounded-xl bg-[#ff6b00] hover:bg-[#ff7a18] text-white text-xs font-bold shadow-lg shadow-[#ff6b00]/25 transition-all">Kembali ke Projects</a>
+        <a href="/projects.html" class="px-5 py-2.5 rounded-xl bg-[#ff6b00] hover:bg-[#ff7a18] text-white text-xs font-bold shadow-lg shadow-[#ff6b00]/25 transition-all">Kembali ke Website</a>
       </div>
     `;
     return;
@@ -39,7 +39,7 @@ async function initProjectDetail() {
         <div class="flex flex-wrap items-center justify-between gap-4 mb-6">
           <a href="/projects.html" class="inline-flex items-center gap-2 text-xs font-semibold text-slate-400 hover:text-[#ff6b00] transition-colors group">
             <svg class="w-4 h-4 group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
-            <span>Kembali ke Galeri Project</span>
+            <span>Kembali ke Galeri Website</span>
           </a>
 
           <div class="flex flex-wrap items-center gap-2.5">
@@ -199,7 +199,7 @@ async function initProjectDetail() {
       <div class="glass-card p-12 text-center rounded-3xl border border-white/[0.08]">
         <h2 class="text-xl font-bold text-white mb-2">Project Tidak Ditemukan</h2>
         <p class="text-xs text-slate-400 mb-6">Proyek yang Anda cari mungkin telah diarsipkan atau belum dipublikasikan.</p>
-        <a href="/projects.html" class="px-5 py-2.5 rounded-xl bg-[#ff6b00] hover:bg-[#ff7a18] text-white text-xs font-bold shadow-lg shadow-[#ff6b00]/25 transition-all">Kembali ke Projects</a>
+        <a href="/projects.html" class="px-5 py-2.5 rounded-xl bg-[#ff6b00] hover:bg-[#ff7a18] text-white text-xs font-bold shadow-lg shadow-[#ff6b00]/25 transition-all">Kembali ke Website</a>
       </div>
     `;
   }

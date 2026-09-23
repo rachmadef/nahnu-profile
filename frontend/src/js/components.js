@@ -25,9 +25,13 @@ export function renderPublicNavbar(activePage = 'home') {
   const container = document.getElementById('navbar-container');
   if (!container) return;
 
+  const currentActive = (activePage === 'projects') ? 'website' : activePage;
+
   const links = [
     { name: 'Home', href: '/index.html', key: 'home' },
-    { name: 'Projects', href: '/projects.html', key: 'projects' },
+    { name: 'Website', href: '/projects.html', key: 'website' },
+    { name: 'Design', href: '/design.html', key: 'design' },
+    { name: 'Entertaintment', href: '/entertainment.html', key: 'entertainment' },
     { name: 'About Team', href: '/about.html', key: 'about' },
     { name: 'Contact', href: '/contact.html', key: 'contact' },
   ];
@@ -41,10 +45,10 @@ export function renderPublicNavbar(activePage = 'home') {
         </a>
 
         <!-- Desktop Navigation Links (Pill Bar) -->
-        <div class="hidden md:flex items-center gap-1 bg-[#151722]/90 p-1.5 rounded-full border border-white/[0.08] shadow-inner">
+        <div class="hidden lg:flex items-center gap-1 bg-[#151722]/90 p-1.5 rounded-full border border-white/[0.08] shadow-inner">
           ${links.map(link => `
-            <a href="${link.href}" class="px-4 py-1.5 rounded-full text-xs font-semibold transition-all ${
-              activePage === link.key
+            <a href="${link.href}" class="px-3.5 py-1.5 rounded-full text-xs font-semibold transition-all ${
+              currentActive === link.key
                 ? 'bg-[#ff6b00] text-white shadow-md shadow-[#ff6b00]/30'
                 : 'text-slate-300 hover:text-white hover:bg-white/[0.06]'
             }">
@@ -54,7 +58,7 @@ export function renderPublicNavbar(activePage = 'home') {
         </div>
 
         <!-- Right Action Button -->
-        <div class="hidden md:flex items-center gap-3">
+        <div class="hidden lg:flex items-center gap-3">
           <a href="/contact.html" class="px-5 py-2.5 text-xs font-bold uppercase tracking-wider rounded-xl bg-gradient-to-r from-[#ff6b00] to-[#ff7a18] hover:from-[#ff7a18] hover:to-[#ff8a2e] text-white shadow-lg shadow-[#ff6b00]/25 transition-all hover:scale-[1.02] active:scale-[0.98] flex items-center gap-2">
             <span>Mulai Diskusi</span>
             <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
@@ -62,7 +66,7 @@ export function renderPublicNavbar(activePage = 'home') {
         </div>
 
         <!-- Mobile Three-Dots Overflow Menu -->
-        <div class="relative md:hidden">
+        <div class="relative lg:hidden">
           <button id="mobile-menu-btn" aria-label="Menu Navigasi" aria-expanded="false" class="p-2.5 rounded-xl text-slate-300 hover:text-white hover:bg-white/[0.08] active:bg-white/[0.12] border border-white/[0.08] transition-all flex items-center justify-center shadow-md focus:outline-none">
             <!-- Three Dots Vertical Icon -->
             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -73,7 +77,7 @@ export function renderPublicNavbar(activePage = 'home') {
           </button>
 
           <!-- Floating Popup Menu (Anchored to Top-Right below Three-Dots) -->
-          <div id="mobile-menu" class="hidden absolute right-0 top-full mt-2.5 w-60 z-50 origin-top-right animate-popup">
+          <div id="mobile-menu" class="hidden absolute right-0 top-full mt-2.5 w-64 z-50 origin-top-right animate-popup">
             <div class="bg-[#151722]/98 backdrop-blur-2xl border border-white/[0.12] rounded-2xl p-2 shadow-2xl shadow-black/95 ring-1 ring-white/10 flex flex-col gap-1">
               <!-- Menu Header -->
               <div class="px-3 py-1.5 border-b border-white/[0.06] flex items-center justify-between text-[10px] font-mono text-slate-400">
@@ -84,12 +88,12 @@ export function renderPublicNavbar(activePage = 'home') {
               <!-- Navigation Links -->
               ${links.map(link => `
                 <a href="${link.href}" class="px-3 py-2 rounded-xl text-xs font-semibold flex items-center justify-between transition-colors ${
-                  activePage === link.key
+                  currentActive === link.key
                     ? 'bg-[#ff6b00] text-white shadow-md shadow-[#ff6b00]/25 font-bold'
                     : 'text-slate-300 hover:text-white hover:bg-white/[0.06]'
                 }">
                   <span>${link.name}</span>
-                  ${activePage === link.key
+                  ${currentActive === link.key
                     ? `<span class="w-1.5 h-1.5 rounded-full bg-white shadow-sm"></span>`
                     : `<svg class="w-3.5 h-3.5 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>`
                   }
@@ -160,7 +164,7 @@ export function renderPublicFooter() {
             ${renderBrandLogo('md', false)}
           </div>
           <p class="text-slate-400 max-w-sm leading-relaxed text-xs">
-            Three Developers. One Digital Space. Wadah portofolio kolaboratif 3 software developer dengan spesialisasi arsitektur REST API Laravel dan antarmuka web modern berkinerja tinggi.
+            Three Developers. One Digital Space. Wadah portofolio kolaboratif 3 software developer dengan spesialisasi arsitektur REST API Laravel, antarmuka web modern, karya desain grafis, dan produksi multimedia audio-visual berkinerja tinggi.
           </p>
           <div class="flex items-center gap-3 text-xs text-slate-400 pt-2">
             <span>© ${new Date().getFullYear()} NAHNU. All rights reserved.</span>
@@ -171,7 +175,9 @@ export function renderPublicFooter() {
         <div class="flex flex-col gap-3">
           <span class="text-white font-bold text-xs tracking-wider uppercase">Menu</span>
           <a href="/index.html" class="text-xs text-slate-400 hover:text-[#ff6b00] transition-colors">Home</a>
-          <a href="/projects.html" class="text-xs text-slate-400 hover:text-[#ff6b00] transition-colors">Portfolio Projects</a>
+          <a href="/projects.html" class="text-xs text-slate-400 hover:text-[#ff6b00] transition-colors">Website Showcase</a>
+          <a href="/design.html" class="text-xs text-slate-400 hover:text-[#ff6b00] transition-colors">Design & Visual</a>
+          <a href="/entertainment.html" class="text-xs text-slate-400 hover:text-[#ff6b00] transition-colors">Entertaintment & Media</a>
           <a href="/about.html" class="text-xs text-slate-400 hover:text-[#ff6b00] transition-colors">Meet the Team</a>
           <a href="/contact.html" class="text-xs text-slate-400 hover:text-[#ff6b00] transition-colors">Contact Us</a>
         </div>
