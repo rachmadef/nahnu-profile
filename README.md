@@ -1,7 +1,7 @@
 # NAHNU — Digital Collective Space 🚀
 
-> **Three Developers. One Digital Space.**  
-> Website portfolio modern kolaboratif untuk menampilkan profil, kemampuan teknologi, dan showcase project dari tim yang terdiri dari 3 developer.
+> **One Digital Space.**  
+> Website portfolio modern kolaboratif untuk menampilkan profil, kemampuan teknologi, dan showcase project dari tim NAHNU.
 
 ---
 

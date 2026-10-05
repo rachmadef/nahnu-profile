@@ -1,10 +1,10 @@
 # NAHNU — Rancangan Lengkap Website Portfolio
 
-> **Three Developers. One Digital Space.**
+> **One Digital Space.**
 
 ## 1. Gambaran Umum
 
-NAHNU adalah website portfolio untuk menampilkan profil, kemampuan, teknologi, dan project dari tim yang terdiri dari **3 developer**.
+NAHNU adalah website portfolio untuk menampilkan profil, kemampuan, teknologi, dan project dari **Tim NAHNU**.
 
 Arsitektur aplikasi menggunakan pemisahan **frontend dan backend**:
 

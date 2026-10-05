@@ -35,8 +35,8 @@ class ProjectSeeder extends Seeder
             [
                 'category_id' => $publishedCat?->id,
                 'title' => 'NAHNU — Digital Collective Space',
-                'short_description' => 'Platform portfolio kolaboratif 3 developer dengan headless frontend Vite + Tailwind CSS 4 dan REST API Laravel 13.',
-                'description' => '<p><strong>NAHNU</strong> adalah wadah digital terpadu untuk menampilkan keahlian, teknologi, dan portfolio kolaboratif dari tiga pengembang perangkat lunak.</p><p>Dibangun menggunakan pemisahan arsitektur modern antara frontend independen dan backend RESTful API yang aman dengan Laravel 13 dan Sanctum.</p>',
+                'short_description' => 'Platform portfolio kolaboratif tim NAHNU dengan headless frontend Vite + Tailwind CSS 4 dan REST API Laravel 13.',
+                'description' => '<p><strong>NAHNU</strong> adalah wadah digital terpadu untuk menampilkan keahlian, teknologi, dan portfolio kolaboratif dari tim pengembang perangkat lunak.</p><p>Dibangun menggunakan pemisahan arsitektur modern antara frontend independen dan backend RESTful API yang aman dengan Laravel 13 dan Sanctum.</p>',
                 'cover' => null,
                 'demo_url' => 'https://nahnu.id',
                 'repository_url' => 'https://github.com/nahnu-dev/nahnu-profile',

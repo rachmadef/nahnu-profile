@@ -153,21 +153,17 @@ async function initProjectDetail() {
               </div>
             </div>
 
-            <!-- Team Members Involved -->
+            <!-- Team Involved -->
             <div class="glass-card p-6 rounded-2xl border border-white/[0.08]">
-              <span class="text-[11px] font-mono uppercase font-bold tracking-wider text-[#ff6b00] block mb-4">Developer Terlibat</span>
-              <div class="space-y-3.5">
-                ${(p.team_members && p.team_members.length > 0) ? p.team_members.map(m => `
-                  <div class="flex items-center gap-3 p-2.5 rounded-xl bg-white/[0.02] border border-white/[0.04]">
-                    <div class="w-11 h-11 rounded-xl bg-[#ff6b00]/10 border border-[#ff6b00]/25 flex items-center justify-center font-bold text-sm text-[#ff6b00] overflow-hidden shrink-0 shadow-md">
-                      ${m.photo ? `<img src="${getAssetUrl(m.photo)}" alt="${m.name}" class="w-full h-full object-cover">` : m.name.charAt(0)}
-                    </div>
-                    <div class="truncate">
-                      <h4 class="text-sm font-bold text-white truncate">${m.name}</h4>
-                      <p class="text-[11px] font-semibold text-[#ff6b00] font-mono truncate">${m.role}</p>
-                    </div>
-                  </div>
-                `).join('') : '<span class="text-xs text-slate-400">Tim NAHNU</span>'}
+              <span class="text-[11px] font-mono uppercase font-bold tracking-wider text-[#ff6b00] block mb-3">Tim Pengembang</span>
+              <div class="flex items-center gap-3 p-3 rounded-xl bg-white/[0.02] border border-white/[0.04]">
+                <div class="w-10 h-10 rounded-xl bg-[#ff6b00]/10 border border-[#ff6b00]/25 flex items-center justify-center font-bold text-sm text-[#ff6b00] shrink-0 shadow-md">
+                  N
+                </div>
+                <div class="truncate">
+                  <h4 class="text-sm font-bold text-white truncate">Tim NAHNU</h4>
+                  <p class="text-[11px] font-semibold text-slate-400 font-mono truncate">Software Engineering Studio</p>
+                </div>
               </div>
             </div>
 

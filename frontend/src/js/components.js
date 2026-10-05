@@ -32,7 +32,7 @@ export function renderPublicNavbar(activePage = 'home') {
     { name: 'Website', href: '/projects.html', key: 'website' },
     { name: 'Design', href: '/design.html', key: 'design' },
     { name: 'Entertaintment', href: '/entertainment.html', key: 'entertainment' },
-    { name: 'About Team', href: '/about.html', key: 'about' },
+    { name: 'About NAHNU', href: '/about.html', key: 'about' },
     { name: 'Contact', href: '/contact.html', key: 'contact' },
   ];
 
@@ -164,7 +164,7 @@ export function renderPublicFooter() {
             ${renderBrandLogo('md', false)}
           </div>
           <p class="text-slate-400 max-w-sm leading-relaxed text-xs">
-            Three Developers. One Digital Space. Wadah portofolio kolaboratif 3 software developer dengan spesialisasi arsitektur REST API Laravel, antarmuka web modern, karya desain grafis, dan produksi multimedia audio-visual berkinerja tinggi.
+            One Digital Space. Wadah portofolio kolaboratif tim NAHNU dengan spesialisasi arsitektur REST API Laravel, antarmuka web modern, karya desain grafis, dan produksi multimedia audio-visual berkinerja tinggi.
           </p>
           <div class="flex items-center gap-3 text-xs text-slate-400 pt-2">
             <span>© ${new Date().getFullYear()} NAHNU. All rights reserved.</span>
@@ -178,7 +178,7 @@ export function renderPublicFooter() {
           <a href="/projects.html" class="text-xs text-slate-400 hover:text-[#ff6b00] transition-colors">Website Showcase</a>
           <a href="/design.html" class="text-xs text-slate-400 hover:text-[#ff6b00] transition-colors">Design & Visual</a>
           <a href="/entertainment.html" class="text-xs text-slate-400 hover:text-[#ff6b00] transition-colors">Entertaintment & Media</a>
-          <a href="/about.html" class="text-xs text-slate-400 hover:text-[#ff6b00] transition-colors">Meet the Team</a>
+          <a href="/about.html" class="text-xs text-slate-400 hover:text-[#ff6b00] transition-colors">About NAHNU</a>
           <a href="/contact.html" class="text-xs text-slate-400 hover:text-[#ff6b00] transition-colors">Contact Us</a>
         </div>
 
